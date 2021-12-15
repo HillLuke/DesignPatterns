@@ -59,6 +59,4 @@ namespace DesignPatterns_Console.Creational
             return "Desert";
         }
     }
-
-
 }

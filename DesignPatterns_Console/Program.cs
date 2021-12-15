@@ -7,7 +7,8 @@ namespace DesignPatterns_Console
     {
         static void Main(string[] args)
         {
-            var Example = new AbstractFactory();
+            //var Example = new AbstractFactory();
+            var Example = new Builder();
 
             Example.RunExample();
         }
