@@ -7,9 +7,10 @@ namespace DesignPatterns_Console
     {
         static void Main(string[] args)
         {
-            var Example = new AbstractFactory();
+            //var Example = new AbstractFactory();
             //var Example = new FactoryMethod();
             //var Example = new Builder();
+            var Example = new Prototype();
 
             Example.RunExample();
         }
