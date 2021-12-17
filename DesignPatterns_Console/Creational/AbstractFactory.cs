@@ -10,53 +10,86 @@ namespace DesignPatterns_Console.Creational
     {
         public void RunExample()
         {
-            var DesertBiomeFactory = new DesertBiomeFactory();
-            var DesertBiome = DesertBiomeFactory.MakeBiome();
-            Console.WriteLine($"Biome type {DesertBiome.GetBiomeName()}");
-
-            var ForestBiomeFactory = new ForestBiomeFactory();
-            var ForestBiome = ForestBiomeFactory.MakeBiome();
-            Console.WriteLine($"Biome type {ForestBiome.GetBiomeName()}");
+            new FarmClient(new FarmFactory1()).ListProduce();
+            new FarmClient(new FarmFactory2()).ListProduce();
         }
     }
 
-    abstract class BiomeFactory 
-    { 
-        public abstract Biome MakeBiome();
-    }
-
-    class DesertBiomeFactory : BiomeFactory
+    class FarmClient
     {
-        public override Biome MakeBiome()
+        private Vegatable _vegatable;
+        private Fruit _fruit;
+
+        public FarmClient(IFactory factory)
         {
-            return new DesertBiome();
+            _vegatable = factory.CreateVegatable();
+            _fruit = factory.CreateFruit();
         }
-    }
-    class ForestBiomeFactory : BiomeFactory
-    {
-        public override Biome MakeBiome()
+
+        public void ListProduce()
         {
-            return new ForestBiome();
+            Console.WriteLine($"Farm produces {_vegatable.Name} and {_fruit.Name}");
         }
     }
 
-    abstract class Biome
+    interface IFactory
     {
-        public abstract string GetBiomeName();
+        public Vegatable CreateVegatable();
+        public Fruit CreateFruit();
     }
 
-    class ForestBiome : Biome
+    class FarmFactory1 : IFactory
     {
-        public override string GetBiomeName()
+        public Fruit CreateFruit()
         {
-            return "Forest";
+            return new Apple();
+        }
+
+        public Vegatable CreateVegatable()
+        {
+            return new Potato();
         }
     }
-    class DesertBiome : Biome
+    class FarmFactory2 : IFactory
     {
-        public override string GetBiomeName()
+        public Fruit CreateFruit()
         {
-            return "Desert";
+            return new Orange();
         }
+
+        public Vegatable CreateVegatable()
+        {
+            return new Carrot();
+        }
+    }
+
+    abstract class Vegatable 
+    {
+        public abstract string Name { get; }
+    }
+
+    class Potato : Vegatable
+    {
+        public override string Name => "Potato";
+    }
+
+    class Carrot : Vegatable
+    {
+        public override string Name => "Carrot";
+    }
+
+    abstract class Fruit
+    {
+        public abstract string Name { get; }
+    }
+
+    class Apple : Fruit
+    {
+        public override string Name => "Apple";
+    }
+
+    class Orange : Fruit
+    {
+        public override string Name => "Orange";
     }
 }
