@@ -10,7 +10,8 @@ namespace DesignPatterns_Console
             //var Example = new AbstractFactory();
             //var Example = new FactoryMethod();
             //var Example = new Builder();
-            var Example = new Prototype();
+            //var Example = new Prototype();
+            var Example = new Singleton();
 
             Example.RunExample();
         }
