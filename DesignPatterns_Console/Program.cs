@@ -1,4 +1,5 @@
 ﻿using DesignPatterns_Console.Creational;
+using DesignPatterns_Console.Structural;
 using System;
 
 namespace DesignPatterns_Console
@@ -11,7 +12,9 @@ namespace DesignPatterns_Console
             //var Example = new FactoryMethod();
             //var Example = new Builder();
             //var Example = new Prototype();
-            var Example = new Singleton();
+            //var Example = new Singleton();
+
+            var Example = new Adapter();
 
             Example.RunExample();
         }
