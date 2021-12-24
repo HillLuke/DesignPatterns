@@ -15,7 +15,8 @@ namespace DesignPatterns_Console
             //var Example = new Singleton();
 
             //var Example = new Adapter();
-            var Example = new Bridge();
+            //var Example = new Bridge();
+            var Example = new Composite();
 
             Example.RunExample();
         }
