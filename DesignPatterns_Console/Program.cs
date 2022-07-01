@@ -4,9 +4,9 @@ using System;
 
 namespace DesignPatterns_Console
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             //var Example = new AbstractFactory();
             //var Example = new FactoryMethod();
@@ -17,7 +17,8 @@ namespace DesignPatterns_Console
             //var Example = new Adapter();
             //var Example = new Bridge();
             //var Example = new Composite();
-            var Example = new Decorator();
+            //var Example = new Decorator();
+            var Example = new Facade();
 
             Example.RunExample();
         }
