@@ -18,7 +18,8 @@ namespace DesignPatterns_Console
             //var Example = new Bridge();
             //var Example = new Composite();
             //var Example = new Decorator();
-            var Example = new Facade();
+            //var Example = new Facade();
+            var Example = new Flyweight();
 
             Example.RunExample();
         }
