@@ -19,7 +19,8 @@ namespace DesignPatterns_Console
             //var Example = new Composite();
             //var Example = new Decorator();
             //var Example = new Facade();
-            var Example = new Flyweight();
+            //var Example = new Flyweight();
+            var Example = new Proxy();
 
             Example.RunExample();
         }
