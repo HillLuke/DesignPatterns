@@ -26,7 +26,8 @@ namespace DesignPatterns_Console
             //var Example = new Proxy();
 
             //Behavioral
-            var Example = new ChainOfResponsibility();
+            //var Example = new ChainOfResponsibility();
+            var Example = new Command();
 
             Example.RunExample();
         }
