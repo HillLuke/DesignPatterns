@@ -27,7 +27,8 @@ namespace DesignPatterns_Console
 
             //Behavioral
             //var Example = new ChainOfResponsibility();
-            var Example = new Command();
+            //var Example = new Command();
+            var Example = new Mediator();
 
             Example.RunExample();
         }
