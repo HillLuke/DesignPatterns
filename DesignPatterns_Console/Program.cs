@@ -29,7 +29,8 @@ namespace DesignPatterns_Console
             //var Example = new ChainOfResponsibility();
             //var Example = new Command();
             //var Example = new Mediator();
-            var Example = new Memento();
+            //var Example = new Memento();
+            var Example = new Observer();
 
             Example.RunExample();
         }
